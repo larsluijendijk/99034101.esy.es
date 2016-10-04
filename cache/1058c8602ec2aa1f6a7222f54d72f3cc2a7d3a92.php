@@ -5,19 +5,18 @@
 <title><?php echo e($title); ?></title>
 </head>
 	<body>
-
 <!-- Login Container -->
 <section class="login">
-    <form action="" method="post">
+    <form action="login_action.php" method="post">
     	
         <!-- The Username Field -->
         <label for="username">E-mail
-        <input type="text" name="email" id="email" />
+        <input type="text" name="email" id="email" required="required" />
     	</label>
         
         <!-- The Password Field -->
         <label for="password">Password
-        <input type="password" name="password" id="password" />
+        <input type="password" name="password" id="password" required="required" />
         </label>
         
         <!-- The Remember Me Checkbox -->

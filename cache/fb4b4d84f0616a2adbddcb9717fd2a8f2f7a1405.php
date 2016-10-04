@@ -14,12 +14,12 @@
     <br>
     <br>
     <label for="username">Enter your E-mail here:
-    <input type="text" name="email" id="email" />
+    <input type="text" name="email" id="email" required="required" />
 	</label>
     
     <!-- The Password Field -->
     <label for="password">Enter your Password here:
-     <input type="password" name="password" id="password" />
+     <input type="password" name="password" id="password" required="required" />
     </label>
 
     <!-- Clearn both sides -->
@@ -27,7 +27,7 @@
     <!-- Recover Button --> 
     <input type="button" value="Back" onclick="location.href='login.php';" />
     <!-- The Login Button -->
-    <input id ="submit" type="submit" value="Register" name="submit" />
+    <input id ="submit" type="submit" value="Register" name="submit"  />
 </form>
     
 </section>
