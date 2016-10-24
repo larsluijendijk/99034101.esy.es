@@ -1,21 +1,18 @@
-<?php
-if(!isset($_SESSION["sess_user"])){
- header("Location: login.php");
-}
-else
-{
-?>
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<title><?php echo e($title); ?></title>
 </head>
-<h1>Welcome to my site!</h1>
-<p>You can now use this site properly.</p>
-<?=$_SESSION['sess_user'];?>!<a href="logout.php">Logout</a>
+<div class="title">
+<h2>Welcome to my site!</h1>
+</div>
+<div class="container">
+<p>hey</p>
+
+
+
+</div>
 <body>
 </body>
 </html>
-<?php
-}
-?>

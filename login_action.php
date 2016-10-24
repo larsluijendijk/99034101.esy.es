@@ -1,8 +1,9 @@
 <?php
+ session_start();
 if(isset($_POST["submit"])){
  if(!empty($_POST['email']) && !empty($_POST['password'])){
- $email = $_POST['email'];
- $password = sha1($_POST['password']);
+ 	$email = $_POST['email'];
+ 	$password = sha1($_POST['password']);
  //DB Connection
  $conn = new mysqli('localhost', 'root', '') or die(mysqli_error());
  //Select DB From database
@@ -14,15 +15,14 @@ if(isset($_POST["submit"])){
  {
  while($row = mysqli_fetch_assoc($query))
  {
- $dbusername=$row['email'];
- $dbpassword=$row['password'];
+ $email=$row['email'];
+ $password=$row['password'];
  }
  if($email == $email && $password == $password)
  {
- session_start();
  $_SESSION['sess_user']=$email;
  //Redirect Browser
- header("Location: http://localhost/99034101.esy.es/welcome.php");
+ header('Location:welcome.php');
  }
  }
  else
@@ -35,5 +35,4 @@ if(isset($_POST["submit"])){
  echo "Required All fields!";
  }
 }
-header("Location: http://localhost/99034101.esy.es/welcome.php");
 ?>
